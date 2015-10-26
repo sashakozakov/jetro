@@ -1732,8 +1732,8 @@ button.large, .button.large {
 }
 
 button.small, .button.small {
-  padding: 0.875rem 1.75rem 0.9375rem 1.75rem;
-  font-size: 0.8125rem;
+  padding: 0.5rem 1rem 0.5625rem 1rem;
+  font-size: 0.75rem;
 }
 
 button.tiny, .button.tiny {
