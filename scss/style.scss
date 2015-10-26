@@ -32,38 +32,70 @@ section{
 		}
 	}
 }
+@media #{$topbar-media-query}{
+	.top-bar-section li:not(.has-form):last-child a:not(.button){
+    	padding-right: 0;
+    }
+}
+// .ba-orbir-co
+.ba-slide{
+	.ba-slider{
+	}
+	&__thumbnails{
+		padding-top: 20px;
+	}
+	&__title{
+		color: #FFF;
+		margin: 0 0 10px;
+	}
+	&__caption{
+		@media #{$medium-up}{
+			margin: 30px;
+			max-width: 420px;
+			left: 0;
+			width: auto !important;
+		}
 
-.ba-grid-img{
-	@media only screen{
-		.column,.columns {
-	    	padding-right: 3px;
-		}
-		.ba-img-wrapper{
-			padding-top: 6px;
-			padding-bottom: 6px;
-		}
-		img{
-			width: 100%;
+		:last-child{
+			margin-bottom: 0;
 		}
 	}
 }
+
 
 .ba-info{
 	.ba-info__title{
 		padding: 0 0 15px 70px;
 	}
-	.ba-button-more{
-		padding: 10px 13px;
-	}
 }
 
 .ba-recent-works{
-	.ba-recent-works__title-wrapper{
+	img{
+		width: 100%;
+		display: block;
+	}
+
+	.ba-link__img{
+		position: relative;
+		z-index: 99;
+	}
+	.ba-link__img:before{
+		content: "";
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		opacity: 0.75;
+		background-color: black;
+		z-index: 999;
+	}
+	.ba-recent-works__title{
 		padding-bottom: 10px;
 		background: url(../img/bg-square.png) repeat-x;
-		.ba-recent-works__title{
+		span{
 			display: inline-block;
-			margin-top: 0;
 			background-color: #FFF;
 			padding-right: 20px;
 		}
@@ -78,6 +110,11 @@ section{
 		font-family: $header-font-family;
 		text-transform: uppercase;
 		font-size: 11px;
+	}
+	&__link:hover{
+		h3{
+			color: $primary-color;
+		}
 	}
 	&__wrapper{
 		padding: 8px 13px;

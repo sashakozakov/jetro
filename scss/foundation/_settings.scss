@@ -63,7 +63,8 @@
 // Since the typical default browser font-size is 16px, that makes the calculation for grid size.
 // If you want your base font-size to be different and not have it affect the grid breakpoints,
 // set $rem-base to $base-font-size and make sure $base-font-size is a px value.
-// $base-font-size: 100%;
+// $base-font-size: 12px;
+// $rem-base: $base-font-size;
 
 // The $base-font-size is 100% while $base-line-height is 150%
 // $base-line-height: 150%;
@@ -220,18 +221,18 @@ $header-font-color: $primary-color;
 // $header-text-rendering: optimizeLegibility;
 
 // We use these to control header font sizes
-// $h1-font-size: rem-calc(44);
+// $h1-font-size: rem-calc(24);
 $h2-font-size: rem-calc(18);
 $h3-font-size: rem-calc(16);
-// $h4-font-size: rem-calc(23);
-// $h5-font-size: rem-calc(18);
+// $h4-font-size: rem-calc(15);
+// $h5-font-size: rem-calc(14);
 // $h6-font-size: 1rem;
 
 // We use these to control header size reduction on small screens
-// $h1-font-reduction: rem-calc(10);
-// $h2-font-reduction: rem-calc(10);
-// $h3-font-reduction: rem-calc(5);
-// $h4-font-reduction: rem-calc(5);
+$h1-font-reduction: 0;
+$h2-font-reduction: 0;
+$h3-font-reduction: 0;
+$h4-font-reduction: 0;
 // $h5-font-reduction: 0;
 // $h6-font-reduction: 0;
 
@@ -915,11 +916,11 @@ $button-font-sml: rem-calc(12);
 
 // We use these to control the caption styles
 // $orbit-container-bg: none;
-// $orbit-caption-bg: rgba(51,51,51, .8);
+$orbit-caption-bg: rgba($primary-color, .8);
 // $orbit-caption-font-color: $white;
-// $orbit-caption-font-size: rem-calc(14);
-// $orbit-caption-position: "bottom"; // Supported values: "bottom", "under"
-// $orbit-caption-padding: rem-calc(10 14);
+$orbit-caption-font-size: rem-calc(12);
+$orbit-caption-position: "bottom"; // Supported values: "bottom", "under"
+$orbit-caption-padding: rem-calc(20);
 // $orbit-caption-height: auto;
 
 // We use these to control the left/right nav styles
