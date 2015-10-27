@@ -31,6 +31,10 @@ h1,h2,h3,h4,h5,h6{
     }
 }
 
+
+.ba-content{
+	overflow: hidden;
+}
 @media only screen and (min-width: 64.063em){
 	.ba-section_line{
 		position: relative;
