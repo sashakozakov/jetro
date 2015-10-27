@@ -30,6 +30,7 @@ h1,h2,h3,h4,h5,h6{
     	padding-right: 0;
     }
 }
+
 @media only screen and (min-width: 64.063em){
 	.ba-section_line{
 		position: relative;
@@ -49,7 +50,6 @@ h1,h2,h3,h4,h5,h6{
 		}
 		&:after{
 			left: 100%;
-			overflow-x: hidden;
 		}
 	}
 }

@@ -4818,7 +4818,6 @@ h1, h2, h3, h4, h5, h6 {
   }
   .ba-section_line:after {
     left: 100%;
-    overflow-x: hidden;
   }
 }
 
