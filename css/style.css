@@ -4799,28 +4799,27 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-.ba-section_line {
-  position: relative;
-}
-
-.ba-section_line:before,
-.ba-section_line:after {
-  content: "";
-  display: block;
-  position: absolute;
-  top: 0;
-  height: 60px;
-  width: 100vh;
-  background: #f4b39e;
-}
-
-.ba-section_line:before {
-  right: 100%;
-}
-
-.ba-section_line:after {
-  left: 100%;
-  overflow-x: hidden;
+@media only screen and (min-width: 64.063em) {
+  .ba-section_line {
+    position: relative;
+  }
+  .ba-section_line:before,
+  .ba-section_line:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    height: 60px;
+    width: 100vh;
+    background: #f4b39e;
+  }
+  .ba-section_line:before {
+    right: 100%;
+  }
+  .ba-section_line:after {
+    left: 100%;
+    overflow-x: hidden;
+  }
 }
 
 .ba-slide {
