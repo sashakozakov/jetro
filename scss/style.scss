@@ -6,17 +6,8 @@
 section{
 	padding-bottom: 45px;
 }
-
-.cf:before,
-.cf:after {
-    content: " ";
-    display: table;
-}
-.cf:after {
-    clear: both;
-}
-.cf {
-    *zoom: 1;
+h1,h2,h3,h4,h5,h6{
+	word-spacing: 3px;
 }
 
 .top-bar{
@@ -25,6 +16,8 @@ section{
 			a{
 				color: $primary-color;
 				padding: 0;
+				position: relative;
+				top: 4px;
 				.ba-logo__light{
 					color: #f3af9d;
 				}
@@ -37,12 +30,35 @@ section{
     	padding-right: 0;
     }
 }
-// .ba-orbir-co
+
+.ba-section_line{
+	position: relative;
+
+	&:before,
+	&:after{
+		content: "";
+		display: block;
+		position: absolute;
+		top: 0;
+		height: 60px;
+		width: 100vh;
+		background: $alert-color;
+	}
+	&:before{
+		right: 100%;
+	}
+	&:after{
+		left: 100%;
+		overflow-x: hidden;
+	}
+}
+
 .ba-slide{
+	position: relative;
 	.ba-slider{
 	}
 	&__thumbnails{
-		padding-top: 20px;
+		padding-top: 18px;
 	}
 	&__title{
 		color: #FFF;
@@ -65,33 +81,20 @@ section{
 
 .ba-info{
 	.ba-info__title{
+		margin-top: 0;
 		padding: 0 0 15px 70px;
+	}
+	.small{
+		margin-top: 10px;
+		margin-bottom: 0;
+		@media only screen and (max-width: 40em){
+			margin-bottom: 20px;
+		}
 	}
 }
 
-.ba-recent-works{
-	img{
-		width: 100%;
-		display: block;
-	}
-
-	.ba-link__img{
-		position: relative;
-		z-index: 99;
-	}
-	.ba-link__img:before{
-		content: "";
-		display: block;
-		position: absolute;
-		top: 0;
-		left: 0;
-		right: 0;
-		bottom: 0;
-		opacity: 0.75;
-		background-color: black;
-		z-index: 999;
-	}
-	.ba-recent-works__title{
+.ba-portfolio{
+	&__title{
 		padding-bottom: 10px;
 		background: url(../img/bg-square.png) repeat-x;
 		span{
@@ -99,6 +102,42 @@ section{
 			background-color: #FFF;
 			padding-right: 20px;
 		}
+	}
+
+	.ba-portfolio__link_img{
+		position: relative;
+		display: block;
+		img{
+			width: 100%;
+			display: block;
+		}
+	}
+	.ba-portfolio__link_img:before{
+		content: "";
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		opacity: 0.7;
+		background-color: black;
+		visibility: hidden;
+	}
+	.ba-portfolio__link_img:after{
+		content: "";
+		display: block;
+		position: absolute;
+		background: url(../img/link.png) center no-repeat;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		visibility: hidden;
+	}
+	.ba-portfolio__link_img:hover:before,
+	.ba-portfolio__link_img:hover:after{
+		visibility: visible;
 	}
 
 	&__subtitle{
@@ -132,20 +171,17 @@ section{
 }
 
 .ba-footer{
-	background-color: #FFA985;
+	background-color: $alert-color;
 	color: #FFF;
 	.row{
 		background: $primary-color;
-		padding-top: 40px;
-		padding-bottom: 40px;
+		padding: 35px 35px;
 		border-left: 10px solid #fff;
 		border-right: 10px solid #fff;
-		// padding-left: 25px;
-		// padding-right: 25px;
 
 		.columns{
-			padding-left: 35px;
-			padding-right: 35px;
+			padding-left: 10px;
+			padding-right: 10px;
 		}
 	}
 	a{
@@ -164,7 +200,7 @@ section{
 		margin-bottom: 20px;
 	}
 	p{
-		line-height: 14px;
+		line-height: 15px;
 		margin-top: 10px;
 		margin-bottom: 14px;
 	}
