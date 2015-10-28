@@ -17,13 +17,22 @@ h1,h2,h3,h4,h5,h6{
 				color: $primary-color;
 				padding: 0;
 				position: relative;
-				top: 4px;
+				top: 6px;
+
 				.ba-logo__light{
 					color: #f3af9d;
 				}
 			}
 		}
 	}
+}
+
+@media #{$topbar-media-query}{
+	.top-bar-section li:not(.has-form) a:not(.button),
+	.top-bar-section li.active:not(.has-form) a:not(.button){
+    	padding-top: 7px ;
+		height: 70px;
+    }
 }
 @media #{$topbar-media-query}{
 	.top-bar-section li:not(.has-form):last-child a:not(.button){
@@ -80,6 +89,27 @@ h1,h2,h3,h4,h5,h6{
 		:last-child{
 			margin-bottom: 0;
 		}
+	}
+
+    .orbit-prev,
+    .orbit-next {
+        position: absolute;
+
+        &:hover {
+          background-color: $orbit-nav-bg-hover;
+        }
+
+        & > span {
+        	visibility: hidden;
+        }
+    }
+	.orbit-prev{
+        background: url(../img/slider/previous.svg) 0 50% no-repeat;
+		margin-left: 23px;
+	}
+	.orbit-next{
+        background: url(../img/slider/next.svg) 0 50% no-repeat;
+		margin-right: 23px;
 	}
 }
 

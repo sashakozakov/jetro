@@ -4786,11 +4786,19 @@ h1, h2, h3, h4, h5, h6 {
   color: #e8663c;
   padding: 0;
   position: relative;
-  top: 4px;
+  top: 6px;
 }
 
 .top-bar .name h1 a .ba-logo__light {
   color: #f3af9d;
+}
+
+@media only screen and (min-width: 40.0625em) {
+  .top-bar-section li:not(.has-form) a:not(.button),
+  .top-bar-section li.active:not(.has-form) a:not(.button) {
+    padding-top: 7px;
+    height: 70px;
+  }
 }
 
 @media only screen and (min-width: 40.0625em) {
@@ -4849,6 +4857,31 @@ h1, h2, h3, h4, h5, h6 {
 
 .ba-slide__caption :last-child {
   margin-bottom: 0;
+}
+
+.ba-slide .orbit-prev,
+.ba-slide .orbit-next {
+  position: absolute;
+}
+
+.ba-slide .orbit-prev:hover,
+.ba-slide .orbit-next:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.ba-slide .orbit-prev > span,
+.ba-slide .orbit-next > span {
+  visibility: hidden;
+}
+
+.ba-slide .orbit-prev {
+  background: url(../img/slider/previous.svg) 0 50% no-repeat;
+  margin-left: 23px;
+}
+
+.ba-slide .orbit-next {
+  background: url(../img/slider/next.svg) 0 50% no-repeat;
+  margin-right: 23px;
 }
 
 .ba-info .ba-info__title {
