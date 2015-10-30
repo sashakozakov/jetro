@@ -2,7 +2,6 @@
 @import "foundation.scss";
 @import "fonts";
 
-
 section{
 	padding-bottom: 45px;
 }
@@ -233,6 +232,7 @@ h1,h2,h3,h4,h5,h6{
 	}
 	h2{
 		margin-bottom: 20px;
+		font-size: 20px;
 	}
 	p{
 		line-height: 15px;
@@ -246,4 +246,67 @@ h1,h2,h3,h4,h5,h6{
 }
 .ba-socials__item:hover{
 	opacity: .7;
+}
+
+.ba-title{
+	padding-bottom: 25px;
+
+	.ba-title__caption{
+		color: #FFF;
+		background: $primary-color;
+		margin-top: 0;
+		margin-bottom: 0;
+		height: 60px;
+		padding-left: 20px;
+		line-height: 70px;
+	}
+}
+
+/*portfolio*/
+.ba-portfolio-filter{
+	padding-top: 10px;
+padding-bottom: 35px;
+}
+.ba-filter{
+	@include sub-nav(
+    	$font-color: $success-color,
+    	$font-size: rem-calc(14),
+    	$active-bg: $primary-color
+    );
+
+    dd{
+    	margin: 0;
+    	padding: 7px 0;
+    }
+    dd a{
+    	padding: 0 10px;
+	    text-transform: uppercase;
+    }
+    dd.active a{
+    	padding: 10px 12px 6px;
+    }
+}
+.ba-picture{
+	padding-bottom: 5px;
+
+	.ba-portfolio-line{
+		margin-bottom: 40px;
+	}
+}
+
+/*portflio item*/
+.ba-portfolio-item-page{
+	section{
+		padding-bottom: 23px;
+	}
+}
+.ba-portfolio-item{
+
+	&__link{
+		display: block;
+		margin-bottom: 20px;
+	}
+	&__content{
+		margin-bottom: 15px;
+	}
 }
