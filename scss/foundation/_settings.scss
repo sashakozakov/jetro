@@ -120,9 +120,9 @@ $column-gutter: rem-calc(20);
 $primary-color: #e8663c;
 $secondary-color: #b9b9b9;
 $alert-color: #f4b39e;
-// $success-color: #43AC6A;
-// $warning-color: #f08a24;
-// $info-color: #a0d3e8;
+$success-color: #98c601;
+$warning-color: #fab418;
+$info-color: #4d8fcb;
 
 // We use these to control various global styles
 // $body-bg: $white;
@@ -225,7 +225,7 @@ $h1-font-size: rem-calc(24);
 $h2-font-size: rem-calc(18);
 $h3-font-size: rem-calc(16);
 // $h4-font-size: rem-calc(15);
-// $h5-font-size: rem-calc(14);
+$h5-font-size: rem-calc(14);
 // $h6-font-size: 1rem;
 
 // We use these to control header size reduction on small screens
