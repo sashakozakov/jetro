@@ -31,6 +31,7 @@ h1,h2,h3,h4,h5,h6{
 	.top-bar-section li.active:not(.has-form) a:not(.button){
     	padding-top: 7px ;
 		height: 70px;
+		word-spacing: 2px;
     }
 }
 @media #{$topbar-media-query}{
@@ -121,6 +122,11 @@ h1,h2,h3,h4,h5,h6{
 		padding-right: 20px;
 	}
 }
+
+.ba-info__title{
+	padding-left: 70px;
+}
+
 .ba-portfolio{
 
 	.ba-portfolio__link_img{
@@ -269,6 +275,11 @@ h1,h2,h3,h4,h5,h6{
 		border-left: 8px solid $primary-color;
 		padding: 0 18px;
 		margin-left: 52px;
+
+		@media (max-width: 40em){
+			margin: 0;
+			margin-bottom: 20px;
+		}
 	}
 }
 .ba-letter{
@@ -355,20 +366,22 @@ h1,h2,h3,h4,h5,h6{
 
 	&__link_img{
 		display: inline-block;
-		height: 50px;
-		width: 50px;
+		width: 100%;
+		padding-bottom: 100%;
 		background: $alert-color;
 		border: 1px solid $primary-color;
 	}
 
 	.ba-photo-gallery .row {
-		padding-right: 15px;
+		padding-right: 7px;
+		padding-left: 7px;
+
+		.columns{
+			padding-left: 3px;
+			padding-right: 3px;
+		}
 	}
 }
-
-
-
-
 
 /*portfolio*/
 .ba-portfolio-filter{
@@ -418,6 +431,60 @@ h1,h2,h3,h4,h5,h6{
 		margin-bottom: 15px;
 	}
 }
+
+/*contact us*/
+.ba-contact-us{
+	padding-right: 25px;
+	padding-bottom: 15px;
+	font-size: 12px;
+	line-height: 12px;
+
+	iframe{
+		margin-bottom: 30px;
+	}
+
+	p{
+		margin-bottom: 10px;
+	}
+
+	.ba-address-title{
+		color: $primary-color;
+		font-weight: 700;
+		margin-bottom: 0;
+	}
+	address{
+		font-style: normal;
+
+
+		a{
+			display: block;
+			color: #414141;
+
+			span{
+				font-weight: 700;
+			}
+		}
+	}
+
+	form{
+
+		[type="text"],
+		[type="email"]{
+			width: 217px;
+			margin-bottom: 10px;
+			padding-bottom: 5px;
+			padding-left: 14px;
+		}
+
+		textarea{
+			padding-top: 15px;
+			color: $primary-color;
+			height: 205px;
+			padding-left: 14px;
+		}
+	}
+}
+
 
 
 

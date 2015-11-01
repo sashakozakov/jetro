@@ -452,6 +452,8 @@ html, body {
 *,
 *:before,
 *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -1620,8 +1622,7 @@ button, .button {
   background-color: #e8663c;
   border-color: #d14619;
   color: #FFFFFF;
-  -webkit-transition: background-color 300ms ease-out;
-          transition: background-color 300ms ease-out;
+  transition: background-color 300ms ease-out;
 }
 
 button:hover,
@@ -2039,7 +2040,9 @@ button::-moz-focus-inner {
   left: 50%;
   top: 50%;
   -webkit-transform: translateY(-50%) translateX(-50%);
+  -moz-transform: translateY(-50%) translateX(-50%);
   -ms-transform: translateY(-50%) translateX(-50%);
+  -o-transform: translateY(-50%) translateX(-50%);
   transform: translateY(-50%) translateX(-50%);
   max-height: 100%;
   max-width: 100%;
@@ -2203,11 +2206,13 @@ button::-moz-focus-inner {
 @keyframes rotate {
   from {
     -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
     -ms-transform: rotate(0deg);
     transform: rotate(0deg);
   }
   to {
     -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
     -ms-transform: rotate(360deg);
     transform: rotate(360deg);
   }
@@ -2250,14 +2255,10 @@ button::-moz-focus-inner {
 
 .slideshow-wrapper .preloader {
   border-radius: 1000px;
-  -webkit-animation-duration: 1.5s;
-          animation-duration: 1.5s;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-  -webkit-animation-name: rotate;
-          animation-name: rotate;
-  -webkit-animation-timing-function: linear;
-          animation-timing-function: linear;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+  animation-name: rotate;
+  animation-timing-function: linear;
   border-color: #555555 #FFFFFF;
   border: solid 3px;
   display: block;
@@ -2283,7 +2284,9 @@ button::-moz-focus-inner {
   padding: 0;
   position: relative;
   -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
   -ms-transform: translateZ(0);
+  -o-transform: translateZ(0);
   transform: translateZ(0);
 }
 
@@ -2640,8 +2643,8 @@ label small {
   border-width: 1px;
   display: block;
   font-size: 0.875rem;
-  height: 2.3125rem;
-  line-height: 2.3125rem;
+  height: 2.1875rem;
+  line-height: 2.1875rem;
   overflow: visible;
   padding-bottom: 0;
   padding-top: 0;
@@ -2725,24 +2728,29 @@ input:not([type]), input[type="text"], input[type="password"], input[type="date"
   background-color: #FFFFFF;
   border-style: solid;
   border-width: 1px;
-  border-color: #cccccc;
+  border-color: #e8663c;
   box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
   color: rgba(0, 0, 0, 0.75);
   display: block;
-  font-family: inherit;
-  font-size: 0.875rem;
-  height: 2.3125rem;
+  font-family: "Bebas", Helvetica, Arial, sans-serif;
+  font-size: 0.75rem;
+  height: 2.1875rem;
   margin: 0 0 1rem 0;
   padding: 0.5rem;
   width: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
   -webkit-transition: border-color 0.15s linear, background 0.15s linear;
+  -moz-transition: border-color 0.15s linear, background 0.15s linear;
+  -ms-transition: border-color 0.15s linear, background 0.15s linear;
+  -o-transition: border-color 0.15s linear, background 0.15s linear;
   transition: border-color 0.15s linear, background 0.15s linear;
 }
 
 input:not([type]):focus, input[type="text"]:focus, input[type="password"]:focus, input[type="date"]:focus, input[type="datetime"]:focus, input[type="datetime-local"]:focus, input[type="month"]:focus, input[type="week"]:focus, input[type="email"]:focus, input[type="number"]:focus, input[type="search"]:focus, input[type="tel"]:focus, input[type="time"]:focus, input[type="url"]:focus, input[type="color"]:focus, textarea:focus {
   background-color: #fafafa;
-  border-color: #999999;
+  border-color: #f4b39e;
   outline: none;
 }
 
@@ -2885,21 +2893,21 @@ textarea {
 }
 
 ::-webkit-input-placeholder {
-  color: #666666;
+  color: #e8663c;
 }
 
 :-moz-placeholder {
   /* Firefox 18- */
-  color: #666666;
+  color: #e8663c;
 }
 
 ::-moz-placeholder {
   /* Firefox 19+ */
-  color: #666666;
+  color: #e8663c;
 }
 
 :-ms-input-placeholder {
-  color: #666666;
+  color: #e8663c;
 }
 
 /* Add height value for select elements to match text input height */
@@ -2913,14 +2921,14 @@ select {
   background-repeat: no-repeat;
   border-style: solid;
   border-width: 1px;
-  border-color: #cccccc;
+  border-color: #e8663c;
   color: rgba(0, 0, 0, 0.75);
-  font-family: inherit;
-  font-size: 0.875rem;
+  font-family: "Bebas", Helvetica, Arial, sans-serif;
+  font-size: 0.75rem;
   line-height: normal;
   padding: 0.5rem;
   border-radius: 0;
-  height: 2.3125rem;
+  height: 2.1875rem;
 }
 
 select::-ms-expand {
@@ -2933,7 +2941,7 @@ select.radius {
 
 select:focus {
   background-color: #f3f3f3;
-  border-color: #999999;
+  border-color: #f4b39e;
 }
 
 select:disabled {
@@ -3256,8 +3264,7 @@ meta.foundation-mq-topbar {
   left: 0;
   position: relative;
   width: auto;
-  -webkit-transition: left 300ms ease-out;
-          transition: left 300ms ease-out;
+  transition: left 300ms ease-out;
 }
 
 .top-bar-section ul {
@@ -3668,8 +3675,7 @@ meta.foundation-mq-topbar {
     max-width: 60rem;
   }
   .top-bar-section {
-    -webkit-transition: none 0 0;
-            transition: none 0 0;
+    transition: none 0 0;
     left: 0 !important;
   }
   .top-bar-section ul {
@@ -4853,6 +4859,7 @@ h1, h2, h3, h4, h5, h6 {
   .top-bar-section li.active:not(.has-form) a:not(.button) {
     padding-top: 7px;
     height: 70px;
+    word-spacing: 2px;
   }
 }
 
@@ -4948,6 +4955,10 @@ h1, h2, h3, h4, h5, h6 {
   display: inline-block;
   background-color: #FFF;
   padding-right: 20px;
+}
+
+.ba-info__title {
+  padding-left: 70px;
 }
 
 .ba-portfolio .ba-portfolio__link_img {
@@ -5111,6 +5122,13 @@ h1, h2, h3, h4, h5, h6 {
   margin-left: 52px;
 }
 
+@media (max-width: 40em) {
+  .ba-about-us blockquote {
+    margin: 0;
+    margin-bottom: 20px;
+  }
+}
+
 .ba-letter {
   position: relative;
 }
@@ -5200,14 +5218,20 @@ h1, h2, h3, h4, h5, h6 {
 
 .ba-aside__link_img {
   display: inline-block;
-  height: 50px;
-  width: 50px;
+  width: 100%;
+  padding-bottom: 100%;
   background: #f4b39e;
   border: 1px solid #e8663c;
 }
 
 .ba-aside .ba-photo-gallery .row {
-  padding-right: 15px;
+  padding-right: 7px;
+  padding-left: 7px;
+}
+
+.ba-aside .ba-photo-gallery .row .columns {
+  padding-left: 3px;
+  padding-right: 3px;
 }
 
 /*portfolio*/
@@ -5307,4 +5331,52 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 15px;
 }
 
-/*# sourceMappingURL=style.css.map */
+/*contact us*/
+.ba-contact-us {
+  padding-right: 25px;
+  padding-bottom: 15px;
+  font-size: 12px;
+  line-height: 12px;
+}
+
+.ba-contact-us iframe {
+  margin-bottom: 30px;
+}
+
+.ba-contact-us p {
+  margin-bottom: 10px;
+}
+
+.ba-contact-us .ba-address-title {
+  color: #e8663c;
+  font-weight: 700;
+  margin-bottom: 0;
+}
+
+.ba-contact-us address {
+  font-style: normal;
+}
+
+.ba-contact-us address a {
+  display: block;
+  color: #414141;
+}
+
+.ba-contact-us address a span {
+  font-weight: 700;
+}
+
+.ba-contact-us form [type="text"],
+.ba-contact-us form [type="email"] {
+  width: 217px;
+  margin-bottom: 10px;
+  padding-bottom: 5px;
+  padding-left: 14px;
+}
+
+.ba-contact-us form textarea {
+  padding-top: 15px;
+  color: #e8663c;
+  height: 205px;
+  padding-left: 14px;
+}
