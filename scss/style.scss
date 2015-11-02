@@ -94,9 +94,11 @@ h1,h2,h3,h4,h5,h6{
     .orbit-prev,
     .orbit-next {
         position: absolute;
+        opacity: .5;
 
         &:hover {
-          background-color: $orbit-nav-bg-hover;
+          background-color: transparent;
+          opacity: 1;
         }
 
         & > span {

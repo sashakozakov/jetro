@@ -4924,11 +4924,13 @@ h1, h2, h3, h4, h5, h6 {
 .ba-slide .orbit-prev,
 .ba-slide .orbit-next {
   position: absolute;
+  opacity: .5;
 }
 
 .ba-slide .orbit-prev:hover,
 .ba-slide .orbit-next:hover {
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: transparent;
+  opacity: 1;
 }
 
 .ba-slide .orbit-prev > span,
